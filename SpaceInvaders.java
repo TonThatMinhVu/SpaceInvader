@@ -53,20 +53,20 @@ public class SpaceInvaders extends JFrame implements Commons {
 		help = new JButton("Help");
 		help.addActionListener(new HelpButton());
 
-		JLabel tekst = new JLabel(message, SwingConstants.CENTER);
-		JLabel toptekst = new JLabel(topmessage, SwingConstants.CENTER);
+		JLabel test = new JLabel(message, SwingConstants.CENTER);
+		JLabel toptest = new JLabel(topmessage, SwingConstants.CENTER);
 
 		Font font = new Font("Helvetica", Font.BOLD, 12);
-		tekst.setFont(font);
+		test.setFont(font);
 
 		Font font2 = new Font("Helvetica", Font.BOLD, 20);
-		toptekst.setFont(font2);
+		toptest.setFont(font2);
 
 		frame2.setTitle("Space Invaders");
 
-		frame2.add(tekst);
+		frame2.add(test);
 
-		frame2.add(toptekst, BorderLayout.PAGE_START);
+		frame2.add(toptest, BorderLayout.PAGE_START);
 		JPanel nedredel = new JPanel();
 		nedredel.add(help);
 		nedredel.add(start);

@@ -131,7 +131,7 @@ public class Board extends JPanel implements Runnable, Commons {
 	public void paint(Graphics g) {
 		super.paint(g);
 
-		g.setColor(Color.blue);
+		g.setColor(Color.black);
 		g.fillRect(0, 0, d.width, d.height);
 		g.setColor(Color.green);
 
