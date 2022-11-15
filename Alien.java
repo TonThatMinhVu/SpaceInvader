@@ -9,9 +9,6 @@ public class Alien extends Sprite {
     private Bomb bomb;
     private final String alien = "/img/alien.png";
 
-    /*
-     * Constructor
-     */
     public Alien(int x, int y) {
         this.x = x;
         this.y = y;
@@ -29,6 +26,7 @@ public class Alien extends Sprite {
     /*
      * Getters & Setters
      */
+
     
 	public Bomb getBomb() {
 		return bomb;

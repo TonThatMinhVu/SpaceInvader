@@ -14,7 +14,7 @@ public class SpaceInvaders extends JFrame implements Commons {
 	 */
 	private static final long serialVersionUID = -4905230094675077405L;
 
-	private JButton start, help;
+	private JButton start, help, newlever;
 	
 	/*
 	 * Inicio
@@ -53,6 +53,10 @@ public class SpaceInvaders extends JFrame implements Commons {
 		help = new JButton("Help");
 		help.addActionListener(new HelpButton());
 
+		newlever = new JButton("New Lever");
+		newlever.addActionListener(new ButtonListener());
+		newlever.setBounds(800,800,200,100);
+
 		JLabel test = new JLabel(message, SwingConstants.CENTER);
 		JLabel toptest = new JLabel(topmessage, SwingConstants.CENTER);
 
@@ -62,6 +66,7 @@ public class SpaceInvaders extends JFrame implements Commons {
 		Font font2 = new Font("Helvetica", Font.BOLD, 20);
 		toptest.setFont(font2);
 
+
 		frame2.setTitle("Space Invaders");
 
 		frame2.add(test);
@@ -70,6 +75,7 @@ public class SpaceInvaders extends JFrame implements Commons {
 		JPanel nedredel = new JPanel();
 		nedredel.add(help);
 		nedredel.add(start);
+		nedredel.add(newlever);
 
 		frame2.add(nedredel, BorderLayout.PAGE_END);
 		frame2.setSize(500, 500);
