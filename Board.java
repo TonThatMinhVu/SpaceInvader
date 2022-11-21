@@ -32,7 +32,7 @@ public class Board extends JPanel implements Runnable, Commons {
 	private boolean ingame = true;
 	private boolean havewon = true;
 	private final String expl = "/img/explosion.png";
-	private final String alienpix = "/img/alien.png";
+	private final String alienpix = "img/boss.png";
 	private String message = "You lose this game !!!";
 
 	private Thread animator;
@@ -62,7 +62,7 @@ public class Board extends JPanel implements Runnable, Commons {
 
 		for (int i = 0; i < 4; i++) {
 			for (int j = 0; j < 6; j++) {
-				Alien alien = new Alien(alienX + 18 * j, alienY + 18 * i);
+				Alien alien = new Alien(alienX + 25 * j, alienY + 25 * i);
 				alien.setImage(ii.getImage());
 				aliens.add(alien);
 			}
