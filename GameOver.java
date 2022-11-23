@@ -7,7 +7,9 @@ import javax.swing.ImageIcon;
 public class GameOver extends Sprite implements Commons {
 
 	private final String gameOver = "/img/gameover.png";
+	private final String gameOver1 = "/img/gameover.png";
 	private int width;
+	private int width1;
 
 	/*
 	 * Constructor
@@ -20,6 +22,14 @@ public class GameOver extends Sprite implements Commons {
 		setImage(ii.getImage());
 		setX(0);
 		setY(0);
+
+		ImageIcon ii1 = new ImageIcon(this.getClass().getResource(gameOver1));
+
+		setWidth(ii1.getImage().getWidth(null));
+
+		setImage1(ii1.getImage());
+		setX1(0);
+		setY1(0);
 	}
 
 	/*

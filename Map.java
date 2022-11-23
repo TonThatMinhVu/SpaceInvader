@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
 public class Map extends JPanel implements Runnable, Commons  {
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID1 = 1L;
 
     private Dimension d1;
     private ArrayList aliens1;
@@ -46,16 +46,16 @@ public class Map extends JPanel implements Runnable, Commons  {
         gameInit();
     }
 
-    public void gameInit() {
+    private void gameInit() {
         aliens1 = new ArrayList();
 
-        ImageIcon ii = new ImageIcon(this.getClass().getResource(alienpix1));
+        ImageIcon ii1 = new ImageIcon(this.getClass().getResource(alienpix1));
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 6; j++) {
-                Alien alien = new Alien(alienX1 + 18 * j, alienY1 + 18 * i);
-                alien.setImage(ii.getImage());
-                aliens1.add(alien);
+                Alien alien1 = new Alien(alienX1 + 18 * j, alienY1 + 18 * i);
+                alien1.setImage(ii1.getImage());
+                aliens1.add(alien1);
             }
         }
 
@@ -74,22 +74,22 @@ public class Map extends JPanel implements Runnable, Commons  {
         while (it.hasNext()) {
             Alien alien = (Alien) it.next();
 
-            if (alien.isVisible()) {
-                g.drawImage(alien.getImage(), alien.getX(), alien.getY(), this);
+            if (alien.isVisible1()) {
+                g.drawImage(alien.getImage1(), alien.getX1(), alien.getY1(), this);
             }
 
-            if (alien.isDying()) {
+            if (alien.isDying1()) {
                 alien.die();
             }
         }
     }
 
     public void drawPlayer(Graphics g) {
-        if (player1.isVisible()) {
-            g.drawImage(player1.getImage(), player1.getX(), player1.getY(), this);
+        if (player1.isVisible1()) {
+            g.drawImage(player1.getImage1(), player1.getX1(), player1.getY1(), this);
         }
 
-        if (player1.isDying()) {
+        if (player1.isDying1()) {
             player1.die();
             havewon1 = false;
             ingame1 = false;
@@ -97,12 +97,12 @@ public class Map extends JPanel implements Runnable, Commons  {
     }
 
     public void drawGameEnd(Graphics g) {
-        g.drawImage(gameend1.getImage(), 0, 0, this);
+        g.drawImage(gameend1.getImage1(), 0, 0, this);
     }
 
     public void drawShot(Graphics g) {
-        if (shot1.isVisible())
-            g.drawImage(shot1.getImage(), shot1.getX(), shot1.getY(), this);
+        if (shot1.isVisible1())
+            g.drawImage(shot1.getImage1(), shot1.getX1(), shot1.getY1(), this);
     }
 
     public void drawBombing(Graphics g) {
@@ -111,10 +111,10 @@ public class Map extends JPanel implements Runnable, Commons  {
         while (i3.hasNext()) {
             Alien a1 = (Alien) i3.next();
 
-            Bomb b1 = a1.getBomb();
+            Bomb b1 = a1.getBomb1();
 
             if (!b1.isDestroyed()) {
-                g.drawImage(b1.getImage(), b1.getX(), b1.getY(), this);
+                g.drawImage(b1.getImage1(), b1.getX1(), b1.getY1(), this);
             }
         }
     }
@@ -148,9 +148,9 @@ public class Map extends JPanel implements Runnable, Commons  {
         // g.setColor(Color.black);
         G.fillRect(0, 0, BOARD_WIDTH, BOARD_HEIGTH);
         if (havewon1 == true) {
-            G.drawImage(vunnet1.getImage(), 0, 0, this);
+            G.drawImage(vunnet1.getImage1(), 0, 0, this);
         } else {
-            G.drawImage(gameend1.getImage(), 0, 0, this);
+            G.drawImage(gameend1.getImage1(), 0, 0, this);
         }
         G.setColor(new Color(0, 32, 48));
         G.fillRect(50, BOARD_WIDTH / 2 - 30, BOARD_WIDTH - 100, 50);
@@ -174,39 +174,39 @@ public class Map extends JPanel implements Runnable, Commons  {
 
         // player
 
-        player1.act();
+        player1.act1();
 
         // shot
-        if (shot1.isVisible()) {
+        if (shot1.isVisible1()) {
             Iterator it = aliens1.iterator();
-            int shotX1 = shot1.getX();
-            int shotY1 = shot1.getY();
+            int shotX1 = shot1.getX1();
+            int shotY1 = shot1.getY1();
 
             while (it.hasNext()) {
                 Alien alien = (Alien) it.next();
-                int alienX1 = alien.getX();
-                int alienY1 = alien.getY();
+                int alienX1 = alien.getX1();
+                int alienY1 = alien.getY1();
 
-                if (alien.isVisible() && shot1.isVisible()) {
+                if (alien.isVisible1() && shot1.isVisible1()) {
                     if (shotX1 >= (alienX1) && shotX1 <= (alienX1 + ALIEN_WIDTH)
                             && shotY1 >= (alienY1)
                             && shotY1 <= (alienY1 + ALIEN_HEIGHT)) {
                         ImageIcon ii1 = new ImageIcon(getClass().getResource(
                                 expl1));
-                        alien.setImage(ii1.getImage());
-                        alien.setDying(true);
+                        alien.setImage1(ii1.getImage());
+                        alien.setDying1(true);
                         deaths1++;
                         shot1.die();
                     }
                 }
             }
 
-            int y = shot1.getY();
+            int y = shot1.getY1();
             y -= 8;
             if (y < 0)
                 shot1.die();
             else
-                shot1.setY(y);
+                shot1.setY1(y);
         }
 
         // aliens
@@ -215,14 +215,14 @@ public class Map extends JPanel implements Runnable, Commons  {
 
         while (it1.hasNext()) {
             Alien a1 = (Alien) it1.next();
-            int x = a1.getX();
+            int x = a1.getX1();
 
             if (x >= BOARD_WIDTH - BORDER_RIGHT && direction1 != -1) {
                 direction1 = -1;
                 Iterator i1 = aliens1.iterator();
                 while (i1.hasNext()) {
                     Alien a2 = (Alien) i1.next();
-                    a2.setY(a2.getY() + GO_DOWN);
+                    a2.setY1(a2.getY1() + GO_DOWN);
                 }
             }
 
@@ -232,7 +232,7 @@ public class Map extends JPanel implements Runnable, Commons  {
                 Iterator i2 = aliens1.iterator();
                 while (i2.hasNext()) {
                     Alien a = (Alien) i2.next();
-                    a.setY(a.getY() + GO_DOWN);
+                    a.setY1(a.getY1() + GO_DOWN);
                 }
             }
         }
@@ -240,10 +240,10 @@ public class Map extends JPanel implements Runnable, Commons  {
         Iterator it = aliens1.iterator();
 
         while (it.hasNext()) {
-            Alien alien = (Alien) it.next();
-            if (alien.isVisible()) {
+            Alien alien1 = (Alien) it.next();
+            if (alien1.isVisible1()) {
 
-                int y = alien.getY();
+                int y = alien1.getY1();
 
                 if (y > GROUND - ALIEN_HEIGHT) {
                     havewon1 = false;
@@ -251,7 +251,7 @@ public class Map extends JPanel implements Runnable, Commons  {
                     message1 = "...";
                 }
 
-                alien.act(direction1);
+                alien1.act2(direction1);
             }
         }
 
@@ -263,35 +263,35 @@ public class Map extends JPanel implements Runnable, Commons  {
         while (i3.hasNext()) {
             int shot1 = generator.nextInt(15);
             Alien a1 = (Alien) i3.next();
-            Bomb b1 = a1.getBomb();
-            if (shot1 == CHANCE && a1.isVisible() && b1.isDestroyed()) {
+            Bomb b1 = a1.getBomb1();
+            if (shot1 == CHANCE && a1.isVisible1() && b1.isDestroyed()) {
 
                 b1.setDestroyed(false);
-                b1.setX(a1.getX());
-                b1.setY(a1.getY());
+                b1.setX1(a1.getX1());
+                b1.setY1(a1.getY1());
             }
 
-            int bombX1 = b1.getX();
-            int bombY1 = b1.getY();
-            int playerX1 = player1.getX();
-            int playerY1 = player1.getY();
+            int bombX1 = b1.getX1();
+            int bombY1 = b1.getY1();
+            int playerX1 = player1.getX1();
+            int playerY1 = player1.getY1();
 
-            if (player1.isVisible() && !b1.isDestroyed()) {
+            if (player1.isVisible1() && !b1.isDestroyed()) {
                 if (bombX1 >= (playerX1) && bombX1 <= (playerX1 + PLAYER_WIDTH)
                         && bombY1 >= (playerY1)
                         && bombY1 <= (playerY1 + PLAYER_HEIGHT)) {
                     ImageIcon ii = new ImageIcon(this.getClass().getResource(
                             expl1));
-                    player1.setImage(ii.getImage());
-                    player1.setDying(true);
+                    player1.setImage1(ii.getImage());
+                    player1.setDying1(true);
                     b1.setDestroyed(true);
                     ;
                 }
             }
 
             if (!b1.isDestroyed()) {
-                b1.setY(b1.getY() + 1);
-                if (b1.getY() >= GROUND - BOMB_HEIGHT) {
+                b1.setY1(b1.getY1() + 1);
+                if (b1.getY1() >= GROUND - BOMB_HEIGHT) {
                     b1.setDestroyed(true);
                 }
             }
@@ -324,23 +324,23 @@ public class Map extends JPanel implements Runnable, Commons  {
 
     private class TA extends KeyAdapter {
 
-        public void keyReleased(KeyEvent e) {
-            player1.keyReleased(e);
+        public void keyReleased1(KeyEvent E) {
+            player1.keyReleased(E);
         }
 
-        public void keyPressed(KeyEvent e) {
+        public void keyPressed1(KeyEvent E) {
 
-            player1.keyPressed(e);
+            player1.keyPressed(E);
 
-            int x = player1.getX();
-            int y = player1.getY();
+            int x1 = player1.getX1();
+            int y1 = player1.getY1();
 
             if (ingame1) {
-                int key = e.getKeyCode();
-                if (key == KeyEvent.VK_SPACE) {
+                int key1 = E.getKeyCode();
+                if (key1 == KeyEvent.VK_SPACE) {
 
-                    if (!shot1.isVisible())
-                        shot1 = new Shot(x, y);
+                    if (!shot1.isVisible1())
+                        shot1 = new Shot();
                 }
             }
         }

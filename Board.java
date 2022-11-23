@@ -349,7 +349,7 @@ public class Board extends JPanel implements Runnable, Commons {
 				if (key == KeyEvent.VK_SPACE) {
 
 					if (!shot.isVisible())
-						shot = new Shot(x, y);
+						shot = new Shot();
 				}
 			}
 		}

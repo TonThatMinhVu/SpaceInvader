@@ -54,7 +54,7 @@ public class SpaceInvaders extends JFrame implements Commons {
 		help.addActionListener(new HelpButton());
 
 		newlever = new JButton("New Lever");
-		newlever.addActionListener(new ButtonListener());
+		newlever.addActionListener(new Button());
 		newlever.setBounds(800,800,200,100);
 
 		JLabel test = new JLabel(message, SwingConstants.CENTER);
@@ -113,6 +113,20 @@ public class SpaceInvaders extends JFrame implements Commons {
 			frame.setVisible(true);
 			closeIntro();
 
+		}
+	}
+
+	private class Button implements ActionListener {
+
+		public void actionPerformed(ActionEvent E) {
+
+			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			frame.setSize(BOARD_WIDTH, BOARD_HEIGTH);
+			frame.getContentPane().add(new Map());
+			frame.setResizable(false);
+			frame.setLocationRelativeTo(null);
+			frame.setVisible(true);
+			closeIntro();
 		}
 	}
 
