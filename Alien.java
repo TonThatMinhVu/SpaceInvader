@@ -10,6 +10,8 @@ public class Alien extends Sprite {
     private Bomb bomb1;
     private final String alien = "/img/alien.png";
     private final String alien1 = "/img/alien.png";
+
+
     public Alien(int x, int y) {
         this.x = x;
         this.y = y;

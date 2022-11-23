@@ -23,6 +23,7 @@ public class Board extends JPanel implements Runnable, Commons {
 	private Shot shot;
 	private GameOver gameend;
 	private Won vunnet;
+	private Background bg;
 
 	private int alienX = 150;
 	private int alienY = 25;
@@ -31,8 +32,9 @@ public class Board extends JPanel implements Runnable, Commons {
 
 	private boolean ingame = true;
 	private boolean havewon = true;
+
 	private final String expl = "/img/explosion.png";
-	private final String alienpix = "/img/alien.png";
+	private final String alienpix = "img/boss.png";
 	private String message = "You lose this game !!!";
 
 	private Thread animator;
@@ -62,7 +64,7 @@ public class Board extends JPanel implements Runnable, Commons {
 
 		for (int i = 0; i < 4; i++) {
 			for (int j = 0; j < 6; j++) {
-				Alien alien = new Alien(alienX + 18 * j, alienY + 18 * i);
+				Alien alien = new Alien(alienX + 33 * j, alienY + 33 * i);
 				alien.setImage(ii.getImage());
 				aliens.add(alien);
 			}
@@ -130,10 +132,13 @@ public class Board extends JPanel implements Runnable, Commons {
 
 	public void paint(Graphics g) {
 		super.paint(g);
-
-		g.setColor(Color.black);
+		Graphics n = this.getGraphics();
+		// Background color
+		bg = new Background();
+		n.drawImage(bg.getImage(), 0, 0, this);
+		//g.setColor(Color.black); 
 		g.fillRect(0, 0, d.width, d.height);
-		g.setColor(Color.green);
+		g.setColor(Color.red );// bottom color
 
 		if (ingame) {
 
@@ -154,14 +159,14 @@ public class Board extends JPanel implements Runnable, Commons {
 		gameend = new GameOver();
 		vunnet = new Won();
 
-		// g.setColor(Color.black);
+		// g.setColor(Color.black); // Lose Game bar
 		g.fillRect(0, 0, BOARD_WIDTH, BOARD_HEIGTH);
 		if (havewon == true) {
 			g.drawImage(vunnet.getImage(), 0, 0, this);
 		} else {
 			g.drawImage(gameend.getImage(), 0, 0, this);
 		}
-		g.setColor(new Color(0, 32, 48));
+		g.setColor(new Color(0, 0, 0));
 		g.fillRect(50, BOARD_WIDTH / 2 - 30, BOARD_WIDTH - 100, 50);
 		g.setColor(Color.white);
 		g.drawRect(50, BOARD_WIDTH / 2 - 30, BOARD_WIDTH - 100, 50);
