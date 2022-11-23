@@ -47,3 +47,4 @@ public class Alien extends Sprite {
         return bomb1;
     }
 }
+
