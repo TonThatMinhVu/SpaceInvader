@@ -25,12 +25,13 @@ public class GameOver extends Sprite implements Commons {
 
 		ImageIcon ii1 = new ImageIcon(this.getClass().getResource(gameOver1));
 
-		setWidth(ii1.getImage().getWidth(null));
+		setWidth1(ii1.getImage().getWidth(null));
 
 		setImage1(ii1.getImage());
 		setX1(0);
 		setY1(0);
 	}
+
 
 	/*
 	 * Getters & Setters
@@ -39,8 +40,12 @@ public class GameOver extends Sprite implements Commons {
 	public int getWidth() {
 		return width;
 	}
+	public int getWidth1(){ return width1; }
 
 	public void setWidth(int width) {
 		this.width = width;
+	}
+	public void setWidth1(int width1) {
+		this.width1 = width1;
 	}
 }

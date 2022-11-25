@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="001e09a6-e630-4944-a122-861dd3d86ad9" name="Changes" comment="2">
-      <change beforePath="$PROJECT_DIR$/Alien.java" beforeDir="false" afterPath="$PROJECT_DIR$/Alien.java" afterDir="false" />
+    <list default="true" id="001e09a6-e630-4944-a122-861dd3d86ad9" name="Changes" comment="1">
       <change beforePath="$PROJECT_DIR$/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bomb.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bomb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOver.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameOver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PushPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/PushPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shot.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpaceInvaders.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpaceInvaders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Won.java" beforeDir="false" afterPath="$PROJECT_DIR$/Won.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/png-clipart-scalable-graphics-icon-space-satellites-angle-outer-space.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/boss.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceInvader/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceInvader/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceInvader/Alien.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceInvader/Alien.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceInvader/Board$TAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceInvader/Board$TAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceInvader/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceInvader/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceInvader/img/png-clipart-scalable-graphics-icon-space-satellites-angle-outer-space.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +60,28 @@
       <option name="project" value="LOCAL" />
       <updated>1668493876707</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2">
+      <created>1669042890899</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669042890899</updated>
+    </task>
+    <task id="LOCAL-00004" summary="2">
+      <created>1669044089765</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669044089765</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1">
+      <created>1669204384117</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669204384117</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -71,15 +89,27 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/minzu" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1" />
     <MESSAGE value="2" />
-    <option name="LAST_COMMIT_MESSAGE" value="2" />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
 </project>

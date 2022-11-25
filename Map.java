@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
 public class Map extends JPanel implements Runnable, Commons  {
-    private static final long serialVersionUID1 = 1L;
+    private static final long serialVersionUID = 1L;
 
     private Dimension d1;
     private ArrayList aliens1;
@@ -111,9 +111,9 @@ public class Map extends JPanel implements Runnable, Commons  {
         while (i3.hasNext()) {
             Alien a1 = (Alien) i3.next();
 
-            Bomb b1 = a1.getBomb1();
+            Bomb1 b1 = a1.getBomb1();
 
-            if (!b1.isDestroyed()) {
+            if (!b1.isDestroyed1()) {
                 g.drawImage(b1.getImage1(), b1.getX1(), b1.getY1(), this);
             }
         }
@@ -263,10 +263,10 @@ public class Map extends JPanel implements Runnable, Commons  {
         while (i3.hasNext()) {
             int shot1 = generator.nextInt(15);
             Alien a1 = (Alien) i3.next();
-            Bomb b1 = a1.getBomb1();
-            if (shot1 == CHANCE && a1.isVisible1() && b1.isDestroyed()) {
+            Bomb1 b1 = a1.getBomb1();
+            if (shot1 == CHANCE && a1.isVisible1() && b1.isDestroyed1()) {
 
-                b1.setDestroyed(false);
+                b1.setDestroyed1(false);
                 b1.setX1(a1.getX1());
                 b1.setY1(a1.getY1());
             }
@@ -276,7 +276,7 @@ public class Map extends JPanel implements Runnable, Commons  {
             int playerX1 = player1.getX1();
             int playerY1 = player1.getY1();
 
-            if (player1.isVisible1() && !b1.isDestroyed()) {
+            if (player1.isVisible1() && !b1.isDestroyed1()) {
                 if (bombX1 >= (playerX1) && bombX1 <= (playerX1 + PLAYER_WIDTH)
                         && bombY1 >= (playerY1)
                         && bombY1 <= (playerY1 + PLAYER_HEIGHT)) {
@@ -284,15 +284,15 @@ public class Map extends JPanel implements Runnable, Commons  {
                             expl1));
                     player1.setImage1(ii.getImage());
                     player1.setDying1(true);
-                    b1.setDestroyed(true);
+                    b1.setDestroyed1(true);
                     ;
                 }
             }
 
-            if (!b1.isDestroyed()) {
+            if (!b1.isDestroyed1()) {
                 b1.setY1(b1.getY1() + 1);
                 if (b1.getY1() >= GROUND - BOMB_HEIGHT) {
-                    b1.setDestroyed(true);
+                    b1.setDestroyed1(true);
                 }
             }
         }
@@ -332,8 +332,8 @@ public class Map extends JPanel implements Runnable, Commons  {
 
             player1.keyPressed(E);
 
-            int x1 = player1.getX1();
-            int y1 = player1.getY1();
+            int x = player1.getX1();
+            int y = player1.getY1();
 
             if (ingame1) {
                 int key1 = E.getKeyCode();
