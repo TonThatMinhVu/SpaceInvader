@@ -34,7 +34,7 @@ public class Board extends JPanel implements Runnable, Commons {
 	private boolean havewon = true;
 
 	private final String expl = "/img/explosion.png";
-	private final String alienpix = "img/alien.png";
+	private final String alienpix = "img/boss.png";
 	private String message = "You lose this game !!!";
 	sound InGameSound = new sound();
 

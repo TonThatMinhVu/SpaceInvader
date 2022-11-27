@@ -53,7 +53,7 @@ public class Map extends JPanel implements Runnable, Commons  {
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 6; j++) {
-                Alien alien1 = new Alien(alienX1 + 18 * j, alienY1 + 18 * i);
+                Alien1 alien1 = new Alien1(alienX1 + 18 * j, alienY1 + 18 * i);
                 alien1.setImage(ii1.getImage());
                 aliens1.add(alien1);
             }
@@ -72,7 +72,7 @@ public class Map extends JPanel implements Runnable, Commons  {
         Iterator it1 = aliens1.iterator();
 
         while (it1.hasNext()) {
-            Alien alien1 = (Alien) it1.next();
+            Alien1 alien1 = (Alien1) it1.next();
 
             if (alien1.isVisible()) {
                 G.drawImage(alien1.getImage1(), alien1.getX1(), alien1.getY1(), this);
@@ -109,7 +109,7 @@ public class Map extends JPanel implements Runnable, Commons  {
         Iterator i31 = aliens1.iterator();
 
         while (i31.hasNext()) {
-            Alien a1 = (Alien) i31.next();
+            Alien1 a1 = (Alien1) i31.next();
 
             Bomb b1 = a1.getBomb1();
 
@@ -188,7 +188,7 @@ public class Map extends JPanel implements Runnable, Commons  {
             int shotY1 = shot1.getY1();
 
             while (it1.hasNext()) {
-                Alien alien1 = (Alien) it1.next();
+                Alien1 alien1 = (Alien1) it1.next();
                 int alienX1 = alien1.getX1();
                 int alienY1 = alien1.getY1();
 
@@ -219,14 +219,14 @@ public class Map extends JPanel implements Runnable, Commons  {
         Iterator it11 = aliens1.iterator();
 
         while (it11.hasNext()) {
-            Alien a11 = (Alien) it11.next();
+            Alien1 a11 = (Alien1) it11.next();
             int x1 = a11.getX1();
 
             if (x1 >= BOARD_WIDTH - BORDER_RIGHT && direction1 != -1) {
                 direction1 = -1;
                 Iterator i11 = aliens1.iterator();
                 while (i11.hasNext()) {
-                    Alien a21 = (Alien) i11.next();
+                    Alien1 a21 = (Alien1) i11.next();
                     a21.setY1(a21.getY1() + GO_DOWN);
                 }
             }
@@ -236,7 +236,7 @@ public class Map extends JPanel implements Runnable, Commons  {
 
                 Iterator i21 = aliens1.iterator();
                 while (i21.hasNext()) {
-                    Alien a1 = (Alien) i21.next();
+                    Alien1 a1 = (Alien1) i21.next();
                     a1.setY1(a1.getY1() + GO_DOWN);
                 }
             }
@@ -245,7 +245,7 @@ public class Map extends JPanel implements Runnable, Commons  {
         Iterator it1 = aliens1.iterator();
 
         while (it1.hasNext()) {
-            Alien alien1 = (Alien) it1.next();
+            Alien1 alien1 = (Alien1) it1.next();
             if (alien1.isVisible()) {
 
                 int y1 = alien1.getY1();
@@ -267,7 +267,7 @@ public class Map extends JPanel implements Runnable, Commons  {
 
         while (i31.hasNext()) {
             int shot1 = generator1.nextInt(15);
-            Alien a1 = (Alien) i31.next();
+            Alien1 a1 = (Alien1) i31.next();
             Bomb b1 = a1.getBomb1();
             if (shot1 == CHANCE && a1.isVisible() && b1.isDestroyed()) {
 

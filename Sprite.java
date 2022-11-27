@@ -6,95 +6,99 @@ import java.awt.Image;
  */
 public class Sprite {
 
-        private boolean visible;
-        private Image image;
-        protected int x;
-        protected int y;
-        protected boolean dying;
-        protected int dx;
+    private boolean visible;
+    private Image image;
+    protected int x;
+    protected int y;
+    protected boolean dying;
+    protected int dx;
 
-        private Image image1;
-        protected int x1;
-        protected int y1;
-        protected boolean dying1;
-        protected int dx1;
+    private Image image1;
+    protected int x1;
+    protected int y1;
+    protected boolean dying1;
+    protected int dx1;
 
-        /*
-         * Constructor
-         */
-        public Sprite() {
-            visible = true;
-        }
+    /*
+     * Constructor
+     */
+    public Sprite() {
+        visible = true;
+    }
 
-        public void die() {
-            visible = false;
-        }
+    public void die() {
+        visible = false;
+    }
 
-        public boolean isVisible() {
-            return visible;
-        }
+    public boolean isVisible() {
+        return visible;
+    }
 
-        protected void setVisible(boolean visible) {
-            this.visible = visible;
-        }
+    protected void setVisible(boolean visible) {
+        this.visible = visible;
+    }
 
-        public void setImage(Image image) {
-            this.image = image;
-        }
-        public void setImage1(Image image1) {
-            this.image1 = image1;
-        }
+    public void setImage(Image image) {
+        this.image = image;
+    }
 
-        public Image getImage() {
-            return image;
-        }
-        public Image getImage1() {
-            return image1;
-        }
+    public void setImage1(Image image1) {
+        this.image1 = image1;
+    }
 
-        public void setX(int x) {
-            this.x = x;
-        }
+    public Image getImage() {
+        return image;
+    }
 
-        public void setY(int y) {
-            this.y = y;
-        }
-        public int getY() {
-            return y;
-        }
+    public Image getImage1() {
+        return image1;
+    }
 
-        public int getX() {
-            return x;
-        }
+    public void setX(int x) {
+        this.x = x;
+    }
 
-        public void setDying(boolean dying) {
-            this.dying = dying;
-        }
+    public void setY(int y) {
+        this.y = y;
+    }
 
-        public boolean isDying() {
-            return this.dying;
-        }
+    public int getY() {
+        return y;
+    }
 
-        public void setX1(int x1) {
+    public int getX() {
+        return x;
+    }
+
+    public void setDying(boolean dying) {
+        this.dying = dying;
+    }
+
+    public boolean isDying() {
+        return this.dying;
+    }
+
+    public void setX1(int x1) {
         this.x1 = x1;
     }
 
-        public void setY1(int y1) {
+    public void setY1(int y1) {
         this.y1 = y1;
     }
-        public int getY1() {
+
+    public int getY1() {
         return y1;
     }
 
-        public int getX1() {
+    public int getX1() {
         return x1;
     }
 
-        public void setDying1(boolean dying1) {
+    public void setDying1(boolean dying1) {
         this.dying1 = dying1;
     }
 
-        public boolean isDying1() {
+    public boolean isDying1() {
         return this.dying1;
     }
 }
