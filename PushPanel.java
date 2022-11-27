@@ -24,7 +24,7 @@ public class PushPanel extends JPanel {
 
 		add(push);
 
-		push2 = new JButton("New Lever");
+		push2 = new JButton("New Level");
 		push2.addActionListener(new Button());
 		push2.setBounds(800, 800, 200, 100);
 
