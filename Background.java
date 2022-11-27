@@ -6,18 +6,18 @@ import javax.swing.ImageIcon;
  */
 public class Background extends Sprite implements Commons {
 
-	private final String background= "img/background.png";
+	private final String background= "img/backgr2.png";
 	private int width;
 
 	/*
 	 * Constructor
 	 */
 	public Background() {
-		ImageIcon ii = new ImageIcon(this.getClass().getResource(background));
+		ImageIcon ii2 = new ImageIcon(this.getClass().getResource(background));
 
-		setWidth(ii.getImage().getWidth(null));
+		setWidth(ii2.getImage().getWidth(null));
 
-		setImage(ii.getImage());
+		setImage(ii2.getImage());
 		setX(0);
 		setY(0);
 	}

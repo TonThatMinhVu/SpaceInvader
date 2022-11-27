@@ -137,8 +137,8 @@ public class Board extends JPanel implements Runnable, Commons {
 		bg = new Background();
 		n.drawImage(bg.getImage(), 0, 0, this);
 		//g.setColor(Color.black);
-		g.fillRect(0, 0, d.width, d.height);
-		g.setColor(Color.red );// bottom color
+		//g.fillRect(0, 0, d.width, d.height);
+		//g.setColor(Color.red );// bottom color
 
 		if (ingame) {
 
