@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="001e09a6-e630-4944-a122-861dd3d86ad9" name="Changes" comment="2">
-      <change beforePath="$PROJECT_DIR$/Alien.java" beforeDir="false" afterPath="$PROJECT_DIR$/Alien.java" afterDir="false" />
+    <list default="true" id="a1f23f9a-35fc-4fe0-a838-5e802dc74e78" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/music/Mainmusic.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/gameover.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/hitmonster.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/music/receivedamage.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bomb.java" beforeDir="false" afterPath="$PROJECT_DIR$/Bomb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOver.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameOver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PushPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/PushPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shot.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpaceInvaders.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpaceInvaders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Won.java" beforeDir="false" afterPath="$PROJECT_DIR$/Won.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/png-clipart-scalable-graphics-icon-space-satellites-angle-outer-space.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/boss.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceInvader/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceInvader/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceInvader/Alien.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceInvader/Alien.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceInvader/Board$TAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceInvader/Board$TAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceInvader/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceInvader/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceInvader/Map$TA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceInvader/Map$TA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceInvader/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceInvader/Map.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceInvader/PushPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SpaceInvader/PushPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SpaceInvader/img/png-clipart-scalable-graphics-icon-space-satellites-angle-outer-space.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/sound.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,42 +29,36 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2HXolMVDVokyTGtVS5jFrt3AGnp" />
+  <component name="ProjectId" id="2I79AiRzfNNwIAg4OK0j0sqPgvh" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Object-Oriented Programming/OOP Project&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "C:/Users/thila/AppData/Local/GitHubDesktop/app-3.1.2/SpaceInvader/music"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\thila\AppData\Local\GitHubDesktop\app-3.1.2\SpaceInvader\music" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\thila\AppData\Local\GitHubDesktop\app-3.1.2\SpaceInvader\music" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="001e09a6-e630-4944-a122-861dd3d86ad9" name="Changes" comment="" />
-      <created>1668440938855</created>
+      <changelist id="a1f23f9a-35fc-4fe0-a838-5e802dc74e78" name="Changes" comment="" />
+      <created>1669521615259</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1668440938855</updated>
+      <updated>1669521615259</updated>
     </task>
-    <task id="LOCAL-00001" summary="1">
-      <created>1668478395938</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1668478395938</updated>
-    </task>
-    <task id="LOCAL-00002" summary="2">
-      <created>1668493876707</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1668493876707</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -76,10 +71,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="1" />
-    <MESSAGE value="2" />
-    <option name="LAST_COMMIT_MESSAGE" value="2" />
   </component>
 </project>

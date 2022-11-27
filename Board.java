@@ -36,8 +36,11 @@ public class Board extends JPanel implements Runnable, Commons {
 	private final String expl = "/img/explosion.png";
 	private final String alienpix = "img/boss.png";
 	private String message = "You lose this game !!!";
+	sound InGameSound = new sound();
 
 	private Thread animator;
+
+
 
 	/*
 	 * Constructor
@@ -50,11 +53,13 @@ public class Board extends JPanel implements Runnable, Commons {
 
 		gameInit();
 		setDoubleBuffered(true);
+		PlayMusic(0);
 	}
 
 	public void addNotify() {
 		super.addNotify();
 		gameInit();
+		PlayMusic(0);
 	}
 
 	public void gameInit() {
@@ -205,8 +210,7 @@ public class Board extends JPanel implements Runnable, Commons {
 					if (shotX >= (alienX) && shotX <= (alienX + ALIEN_WIDTH)
 							&& shotY >= (alienY)
 							&& shotY <= (alienY + ALIEN_HEIGHT)) {
-						ImageIcon ii = new ImageIcon(getClass().getResource(
-								expl));
+						ImageIcon ii = new ImageIcon(getClass().getResource(expl));
 						alien.setImage(ii.getImage());
 						alien.setDying(true);
 						deaths++;
@@ -358,5 +362,20 @@ public class Board extends JPanel implements Runnable, Commons {
 				}
 			}
 		}
+	}
+	public void PlayMusic(int i)
+	{
+		InGameSound.setFile(i);
+		InGameSound.play();
+		InGameSound.loop();
+	}
+	public void StopMusic(int i)
+	{
+		InGameSound.stop();
+	}
+	public void PlaySE(int i)
+	{
+		InGameSound.setFile(i);
+		InGameSound.play();
 	}
 }
