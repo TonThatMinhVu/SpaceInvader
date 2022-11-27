@@ -7,7 +7,7 @@ public class Alien1 extends Sprite {
         this.y1 = y1;
         bomb1 = new Bomb(x1, y1);
         ImageIcon ii1 = new ImageIcon(this.getClass().getResource(alien1));
-        setImage(ii1.getImage());
+        setImage1(ii1.getImage());
     }
 
     public void act2(int direction1){

@@ -11,7 +11,7 @@ public class Map extends JPanel implements Runnable, Commons  {
     private Dimension d1;
     private ArrayList aliens1;
     private Player player1;
-    private Shot shot1;
+    private Shot1 shot1;
     private GameOver gameend1;
     private Won vunnet1;
 
@@ -60,7 +60,7 @@ public class Map extends JPanel implements Runnable, Commons  {
         }
 
         player1 = new Player();
-        shot1 = new Shot();
+        shot1 = new Shot1();
 
         if (animator1 == null || !ingame1) {
             animator1 = new Thread(this);
@@ -345,7 +345,7 @@ public class Map extends JPanel implements Runnable, Commons  {
                 if (key1 == KeyEvent.VK_SPACE) {
 
                     if (!shot1.isVisible())
-                        shot1 = new Shot(x1, y1);
+                        shot1 = new Shot1(x1, y1);
                 }
             }
         }
