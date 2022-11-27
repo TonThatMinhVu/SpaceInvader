@@ -32,7 +32,9 @@ public class Player extends Sprite implements Commons {
 		setY(START_Y);
 
 		ImageIcon ii1 = new ImageIcon(this.getClass().getResource(player1));
+
 		width1 = ii1.getImage().getWidth(null);
+
 		setImage1(ii1.getImage());
 		setX1(START_X1);
 		setY1(START_Y1);
@@ -46,11 +48,11 @@ public class Player extends Sprite implements Commons {
 			x = BOARD_WIDTH - 2 * width;
 	}
 	public void act1() {
-		x += dx1;
-		if (x <= 2)
-			x = 2;
-		if (x >= BOARD_WIDTH - 2 * width1)
-			x = BOARD_WIDTH - 2 * width1;
+		x1 += dx1;
+		if (x1 <= 2)
+			x1 = 2;
+		if (x1 >= BOARD_WIDTH - 2 * width1)
+			x1 = BOARD_WIDTH - 2 * width1;
 	}
 
 

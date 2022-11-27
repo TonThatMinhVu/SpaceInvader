@@ -13,7 +13,6 @@ public class Sprite {
         protected boolean dying;
         protected int dx;
 
-        private boolean visible1;
         private Image image1;
         protected int x1;
         protected int y1;
@@ -25,27 +24,20 @@ public class Sprite {
          */
         public Sprite() {
             visible = true;
-            visible1 = true;
         }
 
         public void die() {
             visible = false;
-            visible1 = false;
         }
 
         public boolean isVisible() {
             return visible;
         }
 
-        public boolean isVisible1() {
-            return visible1;
-        }
         protected void setVisible(boolean visible) {
             this.visible = visible;
         }
-        protected void setVisible1(boolean visible1) {
-            this.visible1 = visible1;
-        }
+
         public void setImage(Image image) {
             this.image = image;
         }

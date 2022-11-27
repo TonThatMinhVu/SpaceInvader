@@ -111,10 +111,6 @@ public class Board extends JPanel implements Runnable, Commons {
 		}
 	}
 
-	public void drawGameEnd(Graphics g) {
-		g.drawImage(gameend.getImage(), 0, 0, this);
-	}
-
 	public void drawShot(Graphics g) {
 		if (shot.isVisible())
 			g.drawImage(shot.getImage(), shot.getX(), shot.getY(), this);
@@ -140,7 +136,7 @@ public class Board extends JPanel implements Runnable, Commons {
 		// Background color
 		bg = new Background();
 		n.drawImage(bg.getImage(), 0, 0, this);
-		//g.setColor(Color.black); 
+		//g.setColor(Color.black);
 		g.fillRect(0, 0, d.width, d.height);
 		g.setColor(Color.red );// bottom color
 
@@ -156,6 +152,10 @@ public class Board extends JPanel implements Runnable, Commons {
 		Toolkit.getDefaultToolkit().sync();
 		g.dispose();
 	}
+
+	private void drawGameend(Graphics g) {g.drawImage(gameend.getImage(), 0, 0, this);
+	}
+
 
 	public void gameOver() {
 		Graphics g = this.getGraphics();
