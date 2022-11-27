@@ -10,8 +10,9 @@ public class Player extends Sprite implements Commons {
 
 	private final int START_Y = 400;
 	private final int START_X = 270;
-	private final int START_Y1 = 600;
-	private final int START_X1 = 300;
+	private final int START_Y1 = 400;
+	private final int START_X1 = 270;
+
 
 	private final String player = "/img/craft.png";
 	private final String player1 = "/img/craft.png";
@@ -31,9 +32,7 @@ public class Player extends Sprite implements Commons {
 		setY(START_Y);
 
 		ImageIcon ii1 = new ImageIcon(this.getClass().getResource(player1));
-
 		width1 = ii1.getImage().getWidth(null);
-
 		setImage1(ii1.getImage());
 		setX1(START_X1);
 		setY1(START_Y1);
@@ -46,14 +45,15 @@ public class Player extends Sprite implements Commons {
 		if (x >= BOARD_WIDTH - 2 * width)
 			x = BOARD_WIDTH - 2 * width;
 	}
-
 	public void act1() {
-		x1 += dx1;
-		if (x1 <= 2)
-			x1 = 2;
-		if (x1 >= BOARD_WIDTH - 2 * width1)
-			x1 = BOARD_WIDTH - 2 * width1;
+		x += dx1;
+		if (x <= 2)
+			x = 2;
+		if (x >= BOARD_WIDTH - 2 * width1)
+			x = BOARD_WIDTH - 2 * width1;
 	}
+
+
 
 		public void keyPressed(KeyEvent e){
 			int key = e.getKeyCode();
@@ -68,16 +68,41 @@ public class Player extends Sprite implements Commons {
 
 		}
 
-		public void keyReleased (KeyEvent E){
-			int key1 = E.getKeyCode();
+		public void keyReleased (KeyEvent e){
+			int key = e.getKeyCode();
 
-			if (key1 == KeyEvent.VK_LEFT) {
-				dx1 = -2;
+			if (key == KeyEvent.VK_LEFT) {
+				dx = 0;
 			}
 
-			if (key1 == KeyEvent.VK_RIGHT) {
-				dx1 = 2;
+			if (key == KeyEvent.VK_RIGHT) {
+				dx = 0;
 			}
 		}
 
+	public void keyPressed1 (KeyEvent E){
+		int key1 = E.getKeyCode();
+
+		if (key1 == KeyEvent.VK_LEFT) {
+			dx1 = -2;
+		}
+
+		if (key1 == KeyEvent.VK_RIGHT) {
+			dx1 = 2;
+		}
+
 	}
+
+	public void keyReleased1 (KeyEvent E){
+		int key1 = E.getKeyCode();
+
+		if (key1 == KeyEvent.VK_LEFT) {
+			dx1 = 0;
+		}
+
+		if (key1 == KeyEvent.VK_RIGHT) {
+			dx1 = 0;
+		}
+	}
+
+}

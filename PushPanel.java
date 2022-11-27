@@ -40,7 +40,7 @@ public class PushPanel extends JPanel {
 	}
 
 	private class Button implements ActionListener {
-		@Override
+
 		public void actionPerformed(ActionEvent E) {
 			new SpaceInvaders();
 		}

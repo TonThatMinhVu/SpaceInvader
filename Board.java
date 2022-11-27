@@ -34,7 +34,7 @@ public class Board extends JPanel implements Runnable, Commons {
 	private boolean havewon = true;
 
 	private final String expl = "/img/explosion.png";
-	private final String alienpix = "img/boss.png";
+	private final String alienpix = "img/alien.png";
 	private String message = "You lose this game !!!";
 	sound InGameSound = new sound();
 
@@ -49,7 +49,6 @@ public class Board extends JPanel implements Runnable, Commons {
 		addKeyListener(new TAdapter());
 		setFocusable(true);
 		d = new Dimension(BOARD_WIDTH, BOARD_HEIGTH);
-		setBackground(Color.black);
 
 		gameInit();
 		setDoubleBuffered(true);
@@ -358,7 +357,7 @@ public class Board extends JPanel implements Runnable, Commons {
 				if (key == KeyEvent.VK_SPACE) {
 
 					if (!shot.isVisible())
-						shot = new Shot();
+						shot = new Shot(x, y);
 				}
 			}
 		}
